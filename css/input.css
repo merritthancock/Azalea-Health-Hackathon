@@ -1,6 +1,10 @@
 body {margin:0;}
         
 
+textarea{
+  display: block;
+  width: 100%;
+}
 ul {
   list-style-type: none;
   margin: 0;
