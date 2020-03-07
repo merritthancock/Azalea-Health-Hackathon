@@ -57,6 +57,7 @@ var options = {
     title: 'National Body Mass Index (BMI) of Male and Female',
     curveType: 'function',
     legend: { position: 'bottom' }
+    //chartArea:{left:0,top:0,width:"50%",height:"50%"}
 };
 
 var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
