@@ -17,7 +17,7 @@
       </ul>
       
       <div >
-        <form action="inout.html">
+        
           <h2>Enter Your Information Below</h2>
           <label for="height">Height</label>
           <input type="text" id="height"  placeholder="Your height in inches...">
@@ -46,9 +46,12 @@
           <label for="avg">Average Daily Hours of Exercise </label>
           <input type="text" id="avg" placeholder="Your avg daily hours of exercise">
         
-          <input type="submit" style="background-color: red;">
+          <input id=sub type="submit" style="background-color: red;" onclick="submitData()">
           <p>Disclaimer: By using this system you authorize Valdosta Area Health Tracker to anonymously use the supplied data for current and future use cases.</p>
-        </form>
+          
+          <label for="bmi">Your calculated BMI</label>
+          <input type="text" id="bmiout"  placeholder="Your bmi">
+        
        </div>
 </body>
 </html>
