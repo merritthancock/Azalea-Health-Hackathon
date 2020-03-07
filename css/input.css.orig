@@ -1,6 +1,7 @@
 body {margin:0;}
         
-
+<<<<<<< HEAD
+=======
 ul {
   list-style-type: none;
   margin: 0;
@@ -33,6 +34,7 @@ li a:hover:not(.active) {
   background-color: red;
 }
 
+>>>>>>> 0112e279d6b0a51213d020d0313bb1ee963bbd5e
 input[type=text], select {
   width: 100%;
   padding: 12px 20px;

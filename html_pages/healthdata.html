@@ -3,7 +3,9 @@
 
 <head>
     <title>VSU Healthcare Tracker</title>
-    <script src="./js/Manager.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/Manager.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/healthdata.css">
 </head>
 <body style="background-color:rgb(230, 217, 217)">
@@ -13,7 +15,10 @@
         <li><a class="active" href="healthdata">National Health Data</a></li>
         <li><a href="resources.html">Rescources</a></li>
         <li><a href="about.html">About</a></li>
-      </ul>
+    </ul>
+    <div>      
+        <div id="curve_chart" style="width: 90px; height: 50px"></div>
+    </div>
 
 </body>
 </html>
