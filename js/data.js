@@ -1,4 +1,4 @@
-[
+var nationalData = [
     {
       "Sex": "Men",
       "Year": 1985,
@@ -329,4 +329,4 @@
       "Year": 2017,
       "Mean BMI (urban)": 29.00179796
     }
-  ]
+  ];
