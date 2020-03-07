@@ -30,3 +30,9 @@ li a:hover:not(.active) {
 .active {
   background-color: red;
 }
+
+div.curve_chart table {
+  align-items: center;
+  width: auto;
+  margin: 0 auto !important;
+}
