@@ -28,7 +28,7 @@ function getBMI(weight, height) {
 function tableBMI(table) {
     for(let i = 1; i < table.length; i++) {
         let bmi = getBMI(table[i][1], table[i][2]);
-        table[i].push(bmi);
+        table[i][5] = bmi;
     }
     console.log("DONE");
 }
