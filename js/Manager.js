@@ -1,9 +1,10 @@
 //Function for user submission
 function submitData() {
-    let weight = null;//document.getElementById("weight").value;
-    let height = null;//document.getElementById("height").value;
-    let age = null;//document.getElementById("age").value;
-    let gender = null;
+    let weight = document.getElementById("weight").value;
+    let height = document.getElementById("height").value;
+    let age = document.getElementById("age").value;
+    var genderButton = document.getElementById("gender");
+    var gender = genderButton.options[genderButton.selectedIndex].value;
     let student = null;
 }
 
