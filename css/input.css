@@ -1,9 +1,6 @@
 body {margin:0;}
         
 
-.list{
-  background-color: red;
-}
 input[type=text], select {
   width: 100%;
   padding: 12px 20px;
@@ -35,6 +32,3 @@ div {
   padding: 20px;
 }
 
-#div2{
-
-}
