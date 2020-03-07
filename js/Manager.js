@@ -28,21 +28,33 @@ function getBMI(weight, height) {
 
 console.log(nationalData);
 
+//Build list of nationalData for men and for women
+let maleNationalData = [];
+let femaleNationalData = [];
+for(let i = 0; i < nationalData.length; i++) {
+    if(nationalData[i]["Sex"] === "Men") {
+        maleNationalData.push([nationalData[i]["Year"],nationalData[i]["Mean BMI (urban)"]]);
+    }
+    else {
+        femaleNationalData.push([nationalData[i]["Year"],nationalData[i]["Mean BMI (urban)"]]);
+    }
+}
+var nationalGraphData = [['Year', 'Average BMI (Male)', 'Average BMI (Female)']];
+for(let i = 1; i < maleNationalData.length + 1; i++) {
+    nationalGraphData.push([]);
+    nationalGraphData[i][0] = maleNationalData[i - 1][0].toString();
+    nationalGraphData[i][1] = maleNationalData[i - 1][1];
+    nationalGraphData[i][2] = femaleNationalData[i - 1][1];
+}
 //Code snippet from https://developers.google.com/chart/interactive/docs/gallery/linechart
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
-var data = google.visualization.arrayToDataTable([
-    ['Year', 'Sales', 'Expenses'],
-    ['2004',  1000,      400],
-    ['2005',  1170,      460],
-    ['2006',  660,       1120],
-    ['2007',  1030,      540]
-]);
+var data = google.visualization.arrayToDataTable(nationalGraphData);
 
 var options = {
-    title: 'Company Performance',
+    title: 'National Body Mass Index (BMI) of Male and Female',
     curveType: 'function',
     legend: { position: 'bottom' }
 };
