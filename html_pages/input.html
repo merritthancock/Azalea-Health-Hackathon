@@ -5,7 +5,20 @@
     <title>VSU Healthcare Tracker</title>
     <script src="../js/Manager.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/input.css">
+ 
+      <script> function bmi(){
+        var w = parseInt(document.getElementById("weight").innerHTML);
+        var h = parseInt(document.getElementById("height").innerHTML);
+        var bmi = getBMI(w,h);
+        document.getElementById("out").innerHTML = bmi;
 
+        }
+        
+
+        function getBMI(weight, height) {
+          return (weight * 703) / (height * height);
+        }
+        </script>
     
 </head>
 
@@ -19,13 +32,14 @@
       </ul>
       
       <div >
-        <form action="inout.html" method="GET">
+        
           <h2>Enter Your Information Below</h2>
           <label for="height">Height</label>
-          <input type="text" id="height"  placeholder="Your height in inches...">
-      
+         <!-- <input type="text" id="height"  placeholder="Your height in inches..."> -->
+          <textarea id="height"></textarea>
           <label for="weight">Weight</label>
-          <input type="text" id="weight"  placeholder="Your weight in pounds...">
+          <!--- <input type="text" id="weight"  placeholder="Your weight in pounds..."> -->
+          <textarea id="weight"></textarea>
       
           <label for="age">Age</label>
           <input type="text" id="age"  placeholder="Your age">
@@ -48,12 +62,16 @@
           <label for="avg">Average Daily Hours of Exercise </label>
           <input type="text" id="avg" placeholder="Your avg daily hours of exercise">
         
-          <input id=sub type="submit" style="background-color: red;" onclick="submitData()">
+          <input id= "sub" type="submit" style="background-color: red;" onclick="submitData()">
           <p>Disclaimer: By using this system you authorize Valdosta Area Health Tracker to anonymously use the supplied data for current and future use cases.</p>
           
           <label for="bmi">Your calculated BMI</label>
-          <input type="text" id="bmiout"  placeholder="Your bmi">
-        
+          <button onclick="bmi()">click</button>
+          <textarea id="out"></textarea>
+
+          <!-- <input type="text" id="bmiout"  placeholder="Your bmi" onclick="bmi()"> -->
+
+       
        </div>
 </body>
 </html>
