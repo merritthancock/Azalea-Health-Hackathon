@@ -9,7 +9,7 @@ function submitData() {
     let student = studentButton.options[studentButton.selectedIndex].value;
     let bmi = getBMI(weight, height);
     let lb = document.getElementById("bmiout"); 
-    lb.textContent = bmi.toString();
+    lb.innerHTML = bmi.toString();
 }
 
 //Function for input sanitization TODO: Fix to actually make user re-input data
