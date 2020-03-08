@@ -9,15 +9,17 @@
       <script> function bmi(){
         var w = parseInt(document.getElementById("weight").innerHTML);
         var h = parseInt(document.getElementById("height").innerHTML);
-        var bmi = getBMI(w,h);
+
+        var bmi = (w * 703) / (h * h);
         document.getElementById("out").innerHTML = bmi;
 
         }
         
-
-        function getBMI(weight, height) {
+        /*function getBMI(weight, height) {
           return (weight * 703) / (height * height);
-        }
+        }*/
+
+        
         </script>
     
 </head>
@@ -25,7 +27,7 @@
 <body style="background-color:rgb(230, 217, 217)">
     <ul >
         <li><a href="../index.html">Home</a></li>
-        <li><a class="active" href="input.html">Get Recomendations</a></li>
+        <li><a class="active" href="input.html">Input Data</a></li>
         <li><a href="healthdata.html">National Health Data</a></li>
         <li><a href="resources.html">Rescources</a></li>
         <li><a href="about.html">About</a></li>
@@ -49,7 +51,6 @@
           <select id="sex">
             <option value="M">Male</option>
             <option value="F">Female</option>
-            <option value="O">Other</option>
           </select> 
 
           <label for="sex">Current Valdosta State Student</label>
@@ -65,9 +66,9 @@
           <input id= "sub" type="submit" style="background-color: red;" onclick="submitData()">
           <p>Disclaimer: By using this system you authorize Valdosta Area Health Tracker to anonymously use the supplied data for current and future use cases.</p>
           
-          <label for="bmi">Your calculated BMI</label>
-          <button onclick="bmi()">click</button>
-          <textarea id="out"></textarea>
+          
+          <!-- <button onclick="bmi()">click</button>
+          <textarea id="out"></textarea> -->
 
           <!-- <input type="text" id="bmiout"  placeholder="Your bmi" onclick="bmi()"> -->
 
