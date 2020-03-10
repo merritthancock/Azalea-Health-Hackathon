@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>VSU Healthcare Tracker</title>
+    <script src="../js/Manager.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/input.css">
+ 
+      <script> function bmi(){
+        var w = parseInt(document.getElementById("weight").innerHTML);
+        var h = parseInt(document.getElementById("height").innerHTML);
+
+        var bmi = (w * 703) / (h * h);
+        document.getElementById("out").innerHTML = bmi;
+
+        }
+        
+        /*function getBMI(weight, height) {
+          return (weight * 703) / (height * height);
+        }*/
+
+        
+        </script>
+    
+</head>
+
+<body style="background-color:rgb(230, 217, 217)">
+    <ul >
+        <li><a href="../index.html">Home</a></li>
+        <li><a class="active" href="input.html">Input Data</a></li>
+        <li><a href="healthdata.html">National Health Data</a></li>
+        <li><a href="resources.html">Rescources</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      
+      <div >
+        
+          <h2>Enter Your Information Below</h2>
+          <label for="height">Height</label>
+         <!-- <input type="text" id="height"  placeholder="Your height in inches..."> -->
+          <textarea id="height"></textarea>
+          <label for="weight">Weight</label>
+          <!--- <input type="text" id="weight"  placeholder="Your weight in pounds..."> -->
+          <textarea id="weight"></textarea>
+      
+          <label for="age">Age</label>
+          <input type="text" id="age"  placeholder="Your age">
+
+          <label for="sex">Sex</label>
+          
+          <select id="sex">
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </select> 
+
+          <label for="sex">Current Valdosta State Student</label>
+
+          <select id="student">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select> 
+
+          <label for="avg">Average Daily Hours of Exercise </label>
+          <input type="text" id="avg" placeholder="Your avg daily hours of exercise">
+        
+          <input id= "sub" type="submit" style="background-color: red;" onclick="submitData()">
+          <p>Disclaimer: By using this system you authorize Valdosta Area Health Tracker to anonymously use the supplied data for current and future use cases.</p>
+          
+          
+          <!-- <button onclick="bmi()">click</button>
+          <textarea id="out"></textarea> -->
+
+          <!-- <input type="text" id="bmiout"  placeholder="Your bmi" onclick="bmi()"> -->
+
+       
+       </div>
+</body>
+</html>
